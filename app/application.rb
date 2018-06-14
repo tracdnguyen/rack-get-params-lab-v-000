@@ -20,7 +20,7 @@ class Application
 
     if req.path.match(/cart/)
       @@cart.each do |items|
-        puts items
+        resp.write "#{items}"
       end
     end
     resp.finish
