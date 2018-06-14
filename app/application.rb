@@ -24,11 +24,10 @@ class Application
       end
     elsif req.path.match(/add/)
       search_item = req.params["item"]
-      if @@items.find do |i|
+      if @@items.include?(search_item)
         i = search_item
-        end
-      @@cart << search_item
-      resp.write "added #{search_item}"
+        @@cart << i
+      resp.write "added #{i}"
     else
       resp.write "We don't have that item."
     end
