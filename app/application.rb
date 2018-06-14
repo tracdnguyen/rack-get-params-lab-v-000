@@ -24,8 +24,8 @@ class Application
       end
     elsif req.path.match(/add/)
       search_item = req.params["item"]
-      if @@items.find do |item|
-        item = search_item
+      if @@items.find do |items|
+        items = search_item
         end
       @@cart << search_item
       resp.write "added #{search_item}"
