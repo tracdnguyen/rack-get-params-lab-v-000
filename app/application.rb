@@ -36,12 +36,6 @@ class Application
       resp.write "Path Not Found"
     end
 
-    if req.path.match(/cart/)
-      @@cart.each do |items|
-        resp.write "#{items}"
-      end
-    elsif
-    end
     resp.finish
   end
 
