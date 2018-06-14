@@ -18,6 +18,10 @@ class Application
       resp.write "Path Not Found"
     end
 
+    if req.path.match(/cart/)
+      @@cart.each do |items|
+        puts items
+      end
     resp.finish
   end
 
