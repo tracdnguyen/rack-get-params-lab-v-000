@@ -22,6 +22,7 @@ class Application
       @@cart.each do |items|
         puts items
       end
+    end
     resp.finish
   end
 
